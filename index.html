@@ -93,17 +93,42 @@ border-radius: 5px; position: relative; animation-name: footer; animation-durati
 top:0px;} 50% {color:white; text-shadow: 1px 1px 1px gold; right:200px; top:200px;} 75% {color:red; text-shadow: 1px 1px 1px gold; right:0px; 
 top:200px;} 100% {color:white; text-shadow: 1px 1px 1px gold; right:0px; top:0px;}}
   
-.container {margin: auto; position: relative; width: 250px; height: 200px;}
+* {box-sizing: border-box;}
 
-.image {border-radius: 10px; border: 1px outset gold; display: block; width: 250px; height: 200px;}
+.column {float: left; width: 33.33%; padding: 5px;}
 
-.overlay {border-radius: 10px; border: 1px outset gold; position: absolute; top: 0px; background-color: black; opacity: 0.5; overflow: hidden;
-width: 0; height: 0; transition: .1s ease;}
+/* Clearfix (clear floats) */
+.row::after {content: ""; clear: both; display: table;}
 
-.container:hover .overlay {width: 100%; height: 100%;}
+.container {position: relative; text-align: center; color: white; text-shadow: 1px 1px 1px gold; width: 250px; height: 200px;}
 
-.text {text-align: left; white-space: nowrap; color: white; text-shadow: 1px 1px 1px gold; position: absolute; font-family: "Monotype Corsiva";
-font-style: italic;}
+.overlay {border: 1px outset gold; border-radius: 10px; position: absolute; bottom: 0; left: 0; right: 0;
+background-color: black; opacity: 0.5; overflow: hidden; width: 100%; height: 100%; -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); -webkit-transition: .1s ease; transition: .1s ease;}
+
+.container:hover .overlay {width: 100%;}
+
+.left {color: white; text-shadow: 1px 1px 1px gold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+.faded {margin: auto; border: 1px outset gold; border-radius: 10px; width: 250px; height: 200px; position: relative;}
+
+.avatar {border: 1px outset gold; border-radius: 10px; display: block; width: 250px; height: 200px;}
+
+
+
+.container:hover .overlay {-webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1);}
+
+.center {font-family: "Monotype Corsiva"; font-style: italic; text-shadow: 1px 1px 1px gold; color: white; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center;}
+
+.container {margin: auto; border: 1px outset gold; border-radius: 10px; position: relative; width: 250px;
+height: 200px;}
+
+.image {border: 1px outset gold; border-radius: 10px; display: block; width: 250px; height: 200px;}
+
+
+
+.container:hover .overlay {width: 100%; left: 0;}
+
+.right {font-family: "Monotype Corsiva"; font-style: italic; color: white; text-shadow: 1px 1px 1px gold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
   
 </style>
   
@@ -156,16 +181,56 @@ Thank you.</p>
   
 </section>
   
-<div class="container">
+<div class="row">
+
+  <div class="column">
   
-<img src="TheGoodNEvil_7_13_2020.jpg" alt="Me" class="image">
+  <div class="container">
   
-<div class="overlay">
+    <img src="TheGoodNEvil_7_13_2020.jpg" alt="Me" style="width:250px;height:200px;border:1px outset gold;border-radius: 10px;">
+    
+    <div class="overlay">
+    
+    <div class="text left">I'm TheGoodNEvil now!</div>
+    
+    </div>
+    
+  </div>
   
-<div class="text">I'm TheGoodNEvil now!</div>
+  </div>
+  
+  <div class="column">
+  
+  <div class="container faded">
+
+  <img src="Alisal.jpg" alt="Alisal" style="width:250px;height:200px;border:1px outset gold;border-radius: 10px;">
+  
+  <div class="overlay">
+  
+    <div class="text center">This was me in at Alisal High School!</div>
+    
+  </div>
   
 </div>
+    
+    </div>
   
+  <div class="column">
+  
+    <div class="container">
+  
+    <img src="USF.jpg" alt="USF" style="width:250px;height:200px;border:1px outset gold;border-radius: 10px;">
+    
+    <div class="overlay">
+    
+    <div class="text right">This was me at the University of San Francisco!</div>
+    
+    </div>
+    
+  </div>
+  
+</div>
+
 </div>
   
 <h3>My Links</h3>
