@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+  h1, p, h3 {background-color: black; opacity: 0.6; font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 10px;}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>TheGoodNEvil Bootstrap Page</h1>
+  <p>This Bootsrap page's supposed to fit into your device's screen a lot better.</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Alisal High School Career</h3>
+      <p>At Alisal High School, I played varsity soccer all of my 4 years there, and I won the league championship every single year. I also became a starter in the team my sophomore year, became the captain my junior year, and I also captained the team to a CCS title my senior year.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>The University of San Francisco Career</h3>
+      <p>At the University of San Francisco, I red-shirted my freshmen year, left the team my sophomore year, played with the club soccer team my sophomore and junior year, returned to the varsity team in the spring semester of my junior year, played in the varsity team all of my senior year, and decided not to play soccer in my 9th semester at the University of San Frnacisco, so I could earn my bachelor's of arts degree in Exercise and Sports Science and graduate.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>TheGoodNEvil</h3>        
+      <p>After graduating from the University of San Francisco, I returned to my home in Salinas, California to work a general labor job and help my family financially. I've worked a few jobs in the past 5 years, and I did like most of the jobs. Also, I fortunately relized that I was doing too much physical work without learning new skills, so I began coding 2 months ago. I've used HTML and CSS to create my first web page, and I'm now learning to use Bootsrap to create better responsive web pages.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
