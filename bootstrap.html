@@ -22,7 +22,18 @@
     
 body {background: url('thesun.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;}
     
-  h1, p, h3, h4, nav, footer {background-color: black; opacity: 0.6; font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 10px;}
+  h1, p, h3, h4, nav, footer {background-color: black; opacity: 0.6; font-family: "Monotype Corsiva"; font-style: italic; color: red; 
+  text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 10px;}
+    
+.pagination {display: inline-block;}
+
+.pagination a {border-radius: 5px; color: red; float: left; padding: 8px 16px; text-decoration: none; transition: background-color .1s;}
+
+.pagination a.active {border-radius: 5px; background-color: red; color: white;}
+
+.pagination a:hover:not(.active) {background-color: red; color: white;}
+
+.center {text-align: center;}
   
 </style>
   
@@ -116,6 +127,18 @@ body {background: url('thesun.jpg'); background-repeat: no-repeat; background-at
 <p style="text-align: center;"><a href="https://thegoodnevil.github.io./bootstrapcarousel.html">Bootstrap: Carousel</a></p>
   
 <p class="text-danger text-center"><a href="https://thegoodnevil.github.io./bootstrapmodal.html">Bootstrap: Modal</a></p>
+  
+<div class="center">
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="https://thegoodnevil.github.io./">1</a>
+  <a href="https://thegoodnevil.github.io./bootstrap.html" class="active">2</a>
+  <a href="https://thegoodnevil.github.io./Bootstrapmygoals.html">3</a>
+  <a href="https://thegoodnevil.github.io./bootstrapcarousel.html">4</a>
+  <a href="https://thegoodnevil.github.io./bootstrapmodal.html">5</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>
   
 <footer style="text-align: center;"><p> &copy; 2020 WBAMN. All Rights Reserved.</p></footer>
 
