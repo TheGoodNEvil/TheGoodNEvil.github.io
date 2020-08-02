@@ -2,21 +2,26 @@
 
 <html>
 
-<style>
+<head>
 
-body {text-align: center; font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 10px;}
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
+}
+</script>
 
+</head>
+
+<style> body {font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 10px; text-align: center;}
 </style>
 
 <body>
 
-<h1>This Is My JavaScript Page!</h1>
+<h1>JavaScript Page</h1>
 
-<p id="demo">This is my first sentence, and you can click the button to change the sentence to another sentence.</p>
+<p id="demo">This is my first JavaScript sentence, and click the button to see the next sentence.</p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "You have clicked the button, and the previous sentence has now changed to 
-this one."'>Click Me!</button>
-
+<button type="button" onclick="myFunction()">Try it</button>
 
 </body>
 
