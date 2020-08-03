@@ -68,16 +68,27 @@ text-align: center;}
 
 <p id="demo">This is my first JavaScript sentence, and click the button to see the next sentence.</p>
 
-<button type="button" onclick="firstButton()">Try it</button>
+<button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red;
+border-radius: 5px;" type="button" onclick="firstButton()">Try it</button>
   
 <h2>Another JavaScript Statement</h2>
 
 <p>Here, instead of clicking the button to change one sentence to another, you click the button for a sentence to appear.</p>
 
-<button type="button" onclick="secondButton()">Click Me!</button>
+<button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red;
+border-radius: 5px;" type="button" onclick="secondButton()">Click Me!</button>
 
 <p id="demos"></p>
 <p id="demoses"></p>
+  
+<h3>Hover Over The Button To Have The Sentence Appear</h3>
+  
+<p>Here, instead of clicking on the button, just hover over the button for the sentence to appear.</p>
+  
+<button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red;
+border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</button>
+  
+<p id="hover"></p>
 
 <script>
   
@@ -90,9 +101,13 @@ function secondButton() {
   document.getElementById("demoses").innerHTML = "How are you all doing?";
 }
   
+function thirdButton() {
+  document.getElementById("hover").innerHTML = "You have hovered over the button, so this is what you get!";
+}
+  
 </script>
   
-<h3>My Links</h3>
+<h4>My Links</h4>
   
 <nav><a href="mailto:gerardov66@gmail.com">Email</a> <a href="https://instagram.com/thegoodnevil">Instagram</a> <a href="https://twitter.com/thegoodnevil1">Twitter</a> <a href="https://facebook.com/thegoodnevil">Facebook</a></nav>
 
