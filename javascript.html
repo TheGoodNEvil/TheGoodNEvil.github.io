@@ -68,21 +68,24 @@ text-align: center;}
 
 <p id="demo">This is my first JavaScript sentence, and click the button to see the next sentence.</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="firstButton()">Try it</button>
   
 <h2>Another JavaScript Statement</h2>
 
 <p>Here, instead of clicking the button to change one sentence to another, you click the button for a sentence to appear.</p>
 
-<button type="button" onclick="myFunction()">Click Me!</button>
+<button type="button" onclick="secondButton()">Click Me!</button>
 
 <p id="demos"></p>
 <p id="demoses"></p>
 
 <script>
   
-function myFunction() {
+function firstButton() {
   document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
+}
+  
+function secondButton() {
   document.getElementById("demos").innerHTML = "Hello everyone!";
   document.getElementById("demoses").innerHTML = "How are you all doing?";
 }
