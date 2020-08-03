@@ -67,12 +67,6 @@ text-align: center;}
 <h1>JavaScript Page</h1>
 
 <p id="demo">This is my first JavaScript sentence, and click the button to see the next sentence.</p>
-  
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
-}
-</script>
 
 <button type="button" onclick="myFunction()">Try it</button>
   
@@ -86,10 +80,13 @@ function myFunction() {
 <p id="demoses"></p>
 
 <script>
+  
 function myFunction() {
+  document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
   document.getElementById("demos").innerHTML = "Hello everyone!";
   document.getElementById("demoses").innerHTML = "How are you all doing?";
 }
+  
 </script>
   
 <h3>My Links</h3>
