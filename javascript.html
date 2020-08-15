@@ -88,6 +88,12 @@ border-radius: 5px;" type="button" onclick="secondButton()">Click Me!</button>
 border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</button>
   
 <p id="hover"></p>
+  
+<h4>Click The Button To Get A Time-Based Greeting!</h4>
+
+<button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 5px;" onclick="myFunction()">Try Me!</button>
+
+<p id="greeting"></p>
 
 <script>
   
@@ -102,6 +108,19 @@ function secondButton() {
   
 function thirdButton() {
   document.getElementById("hover").innerHTML = "You have hovered over the button, so this is what you get!";
+}
+  
+function myFunction() {
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 12) {
+    greeting = "Good morning!";
+  } else if (time < 18) {
+    greeting = "Good afternoon!";
+  } else {
+    greeting = "Good evening!";
+  }
+  document.getElementById("greeting").innerHTML = greeting;
 }
   
 </script>
