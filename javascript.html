@@ -89,7 +89,11 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
   
 <p id="hover"></p>
   
-<h4>Click The Button To Get A Time-Based Greeting!</h4>
+<h4>I'll Tell You What Day It Is!</h4>
+
+<p id="demo"></p>
+  
+<h5>Click The Button To Get A Time-Based Greeting!</h5>
 
 <button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 5px;" onclick="myFunction()">Try Me!</button>
 
@@ -109,6 +113,31 @@ function secondButton() {
 function thirdButton() {
   document.getElementById("hover").innerHTML = "You have hovered over the button, so this is what you get!";
 }
+  
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday,";
+    break;
+  case 1:
+    day = "Monday,";
+    break;
+  case 2:
+    day = "Tuesday,";
+    break;
+  case 3:
+    day = "Wednesday,";
+    break;
+  case 4:
+    day = "Thursday,";
+    break;
+  case 5:
+    day = "Friday,";
+    break;
+  case  6:
+    day = "Saturday,";
+}
+document.getElementById("demo").innerHTML = "Today's " + day + " another day to create!";
   
 function myFunction() {
   var greeting;
