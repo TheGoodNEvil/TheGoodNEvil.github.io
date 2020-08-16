@@ -62,15 +62,19 @@ font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1p
 <source src="beez.mp3" type="audio/mpeg">
 
 </audio>
+  
+<h1>I'll Tell You What Day It Is!</h1>
 
-<h1>JavaScript Page</h1>
+<p id="day"></p>
+
+<h2>Welcome To My JavaScript Page!</h2>
 
 <p id="demo">This is my first JavaScript sentence, and click the button to see the next sentence.</p>
 
 <button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red;
 border-radius: 5px;" type="button" onclick="firstButton()">Try it</button>
   
-<h2>Another JavaScript Statement</h2>
+<h3>Another JavaScript Statement</h3>
 
 <p>Here, instead of clicking the button to change one sentence to another, you click the button for a sentence to appear.</p>
 
@@ -80,7 +84,7 @@ border-radius: 5px;" type="button" onclick="secondButton()">Click Me!</button>
 <p id="demos"></p>
 <p id="demoses"></p>
   
-<h3>Hover Over The Button To Have The Sentence Appear</h3>
+<h4>Hover Over The Button To Have The Sentence Appear</h4>
   
 <p>Here, instead of clicking on the button, just hover over the button for the sentence to appear.</p>
   
@@ -89,10 +93,6 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
   
 <p id="hover"></p>
   
-<h4>I'll Tell You What Day It Is!</h4>
-
-<p id="day"></p>
-  
 <h5>Click The Button To Get A Time-Based Greeting!</h5>
 
 <button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 5px;" onclick="myFunction()">Try Me!</button>
@@ -100,19 +100,6 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
 <p id="greeting"></p>
 
 <script>
-  
-function firstButton() {
-  document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
-}
-  
-function secondButton() {
-  document.getElementById("demos").innerHTML = "Hello everyone!";
-  document.getElementById("demoses").innerHTML = "How are you all doing?";
-}
-  
-function thirdButton() {
-  document.getElementById("hover").innerHTML = "You have hovered over the button, so this is what you get!";
-}
   
 var day;
 switch (new Date().getDay()) {
@@ -138,6 +125,19 @@ switch (new Date().getDay()) {
     day = "Saturday,";
 }
 document.getElementById("day").innerHTML = "Today's " + day + " another day to create!";
+  
+function firstButton() {
+  document.getElementById("demo").innerHTML = "This is my second JavaScript sentence, and I have more exciting things coming.";
+}
+  
+function secondButton() {
+  document.getElementById("demos").innerHTML = "Hello everyone!";
+  document.getElementById("demoses").innerHTML = "How are you all doing?";
+}
+  
+function thirdButton() {
+  document.getElementById("hover").innerHTML = "You have hovered over the button, so this is what you get!";
+}
   
 function myFunction() {
   var greeting;
