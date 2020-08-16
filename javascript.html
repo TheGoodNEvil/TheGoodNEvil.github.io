@@ -91,7 +91,7 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
   
 <h4>I'll Tell You What Day It Is!</h4>
 
-<p id="demo"></p>
+<p id="day"></p>
   
 <h5>Click The Button To Get A Time-Based Greeting!</h5>
 
@@ -137,7 +137,7 @@ switch (new Date().getDay()) {
   case  6:
     day = "Saturday,";
 }
-document.getElementById("demo").innerHTML = "Today's " + day + " another day to create!";
+document.getElementById("day").innerHTML = "Today's " + day + " another day to create!";
   
 function myFunction() {
   var greeting;
