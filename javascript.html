@@ -98,6 +98,17 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
 <button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red; border-radius: 5px;" onclick="myFunction()">Try Me!</button>
 
 <p id="greeting"></p>
+  
+<h5>JavaScript Can Validate Input!</h5>
+
+<p>Please input a number between 1 and 10.</p>
+
+<input id="numb">
+
+<button style="font-family: "Monotype Corsiva"; font-style: italic; color: red; text-shadow: 1px 1px 1px white; border: 1px outset red;
+border-radius: 5px;" type="button" type="button" onclick="numberFunction()">Submit</button>
+
+<p id="number"></p>
 
 <script>
   
@@ -150,6 +161,21 @@ function myFunction() {
     greeting = "Good evening! Let's enjoy dinner.";
   }
   document.getElementById("greeting").innerHTML = greeting;
+}
+  
+function numberFunction() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("number").innerHTML = text;
 }
   
 </script>
