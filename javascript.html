@@ -111,6 +111,10 @@ border-radius: 5px;" type="button" onmouseover="thirdButton()">Hover Over Me!</b
 border-radius: 5px;" type="button" type="button" onclick="numberFunction()">Submit</button>
 
 <p id="number"></p>
+  
+<h5>Enter Your Name: Press "enter" To Have It Converted To All Capital Letters!</h5>
+
+Enter your name: <input type="text" id="finame" onchange="capitalFunction()">
 
 <script>
   
@@ -178,6 +182,11 @@ function numberFunction() {
     text = "You chose a good number! Thanks.";
   }
   document.getElementById("number").innerHTML = text;
+}
+  
+function capitalFunction() {
+  var x = document.getElementById("finame");
+  x.value = x.value.toUpperCase();
 }
   
 </script>
