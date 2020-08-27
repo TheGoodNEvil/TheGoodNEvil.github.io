@@ -17,8 +17,32 @@
   background-color: green; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, green, white, red); /* Standard syntax (must be last) */
 }
+  
+p {text-align: center;}
+
+img {display: block; margin: auto;}
+
+#div1 {margin: auto; width: 400px; height: 100px; border: 1px outset red;}
 
 </style>
+  
+<script>
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
 
 </head>
 
@@ -39,6 +63,16 @@
 <p>My name's Gerardo Tapia Vera, and I was born in Salinas, California at the Natividad Hospital on October 17th, 1991. I'm the first american child of both of my parents, and I'm blessed to be Mexican American.</p>
 
 </div>
+  
+<p>Drag the W3Schools image into the rectangle!</p>
+
+<br>
+
+<img id="drag1" src="brain.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+<br>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 </body>
 
