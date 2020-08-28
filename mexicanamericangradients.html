@@ -5,6 +5,40 @@
 <head>
 
 <style>
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  color: brown;
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  background-color: white;
+  color: brown;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+.active {
+  background-color: green;
+  color: brown;
+}
 
 #grad1 {
   height: 100%;
@@ -47,6 +81,12 @@ function drop(ev) {
 </head>
 
 <body>
+  
+<ul>
+  <li><a class="active" href="">Mexican American Gradients</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
 
 <div id="grad2" style="text-align:center;margin:auto;color:brown;font-size:40px;font-weight:bold">
 
