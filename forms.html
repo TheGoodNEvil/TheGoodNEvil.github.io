@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+function eighteen() {
+  oldenough = document.forms[0].mySelect.value;
+  alert("You've answered " + oldenough+".");
+}
+function disable() {
+  document.getElementById("mySelect").disabled=true;
+}
+function enable() {
+  document.getElementById("mySelect").disabled=false;
+}
+function female() {
+  lady = document.forms[1].seclist.value;
+  alert("You've answered " + lady+".");
+}
+function disable() {
+  document.getElementById("seclist").disabled=true;
+}
+function enable() {
+  document.getElementById("seclist").disabled=false;
+}
+function confirmInput() {
+  fname = document.forms[2].fname.value;
+  alert("Hello " + fname + "! You'll now be redirected to the content in my website.");
+}
+</script>
+</head>
 <style>
 p {text-align:center;}
 form {text-align:center;}
 </style>
 <body>
-
-<p>Enter names in the fields, then click "Submit" to submit the form:</p>
-<p>Enter names in the fields below, then click "Reset" to reset the form.</p>
-
-<form id="frm1" action="/action_page.php">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br><br>
-  <input type="button" onclick="myFunction()" value="Submit">
-  <input type="button" onclick="myFunction()" value="Reset">
+<form>
+Are you at least 18 years old?
+<select id="mySelect" onchange="eighteen()">
+  <option>Yes</option>
+  <option>No</option>
+</select>
+<br><br>
+<input type="button" onclick="disable()" value="Disable list">
+<input type="button" onclick="enable()" value="Enable list">
 </form>
-
-<script>
-function myFunction() {
-  document.getElementById("frm1").submit();
-}
-function myFunction() {
-  document.getElementById("frm1").reset();
-}
-</script>
-
+<br>
+<form>
+Are you a female?
+<select id="seclist" onchange="female()">
+  <option>Yes</option>
+  <option>No</option>
+</select>
+<br><br>
+<input type="button" onclick="disable()" value="Disable list">
+<input type="button" onclick="enable()" value="Enable list">
+</form>
+<br>
+<form onsubmit="confirmInput()" action="https://thegoodnevil.github.io">
+  Enter your name: <input id="fname" type="text" size="20">
+  <input type="submit">
+</form>
 </body>
 </html>
