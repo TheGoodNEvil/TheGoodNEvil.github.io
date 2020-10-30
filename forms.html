@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+<body>
+
+<h1>Welcome To My Qualification Page</h1>
+
+<p>You must be at least 18 years old to view my content. Please, enter your age.</p>
+
+<input id="age">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="verified"></p>
+
+<p>My content is designed for women. If you're a man, then please stay away from my website.</p>
+<p>Are you a woman? Answer '0' for 'Yes' or '1' for 'No'.</p>
+
+<input id="women">
+
+<button type="button" onclick="myWomen()">Submit</button>
+
+<p id="findings"></p>
+
 <script>
-function eighteen() {
-  oldenough = document.forms[0].mySelect.value;
-  alert("You've answered " + oldenough+".");
+function myFunction() {
+  var age, verification;
+
+ 
+  age = document.getElementById("age").value;
+
+ 
+  if (isNaN(age) && age < 18 && age > 100) {
+    verification = "You're not in the age range to view my content.";
+  } else {
+    verification = "You're in the age range to view my content, congratulations.";
+  }
+  document.getElementById("verified").innerHTML = verification;
 }
-function disable() {
-  document.getElementById("mySelect").disabled=true;
-}
-function enable() {
-  document.getElementById("mySelect").disabled=false;
-}
-function female() {
-  lady = document.forms[1].seclist.value;
-  alert("You've answered " + lady+".");
-}
-function disable() {
-  document.getElementById("seclist").disabled=true;
-}
-function enable() {
-  document.getElementById("seclist").disabled=false;
-}
-function confirmInput() {
-  fname = document.forms[2].fname.value;
-  alert("Hello " + fname + "! You'll now be redirected to the content in my website.");
+
+function myWomen() {
+  var gender, result;
+
+ 
+  gender = document.getElementById("women").value;
+
+ 
+  if (isNaN(gender) && gender > 0) {
+    result = "You're not a woman, so you're not supposed to be looking at this website. I'm warning you.";
+  } else {
+    result = "You're a woman, fantastic! Get ready to be intrigued.";
+  }
+  document.getElementById("findings").innerHTML = result;
 }
 </script>
-</head>
-<style>
-p {text-align:center;}
-form {text-align:center;}
-</style>
-<body>
-<form>
-Are you at least 18 years old?
-<select id="mySelect" onchange="eighteen()">
-  <option>Yes</option>
-  <option>No</option>
-</select>
-<br><br>
-<input type="button" onclick="disable()" value="Disable list">
-<input type="button" onclick="enable()" value="Enable list">
-</form>
-<br>
-<form>
-Are you a female?
-<select id="seclist" onchange="female()">
-  <option>Yes</option>
-  <option>No</option>
-</select>
-<br><br>
-<input type="button" onclick="disable()" value="Disable list">
-<input type="button" onclick="enable()" value="Enable list">
-</form>
-<br>
-<form onsubmit="confirmInput()" action="https://thegoodnevil.github.io">
-  Enter your name: <input id="fname" type="text" size="20">
-  <input type="submit">
-</form>
+
 </body>
-</html>
+</html> 
+
