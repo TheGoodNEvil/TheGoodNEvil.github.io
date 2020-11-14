@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <style>
+h1 {text-align:center;}
 #first {
-width: 100%;
-height: 100%;
+height:100%;
+width:100%;
 }
 #left {
   position: relative;
@@ -13,6 +14,7 @@ height: 100%;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 #right {
   position: relative;
   animation-name: right;
@@ -21,17 +23,20 @@ height: 100%;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 @keyframes left {
   0%   {left:0px; top:0px;}
   100% {left:200px; top:0px;}
 }
+
 @keyframes right {
-  0%   {right:-525px; top:0px;}
-  100% {right:-325px; top:0px;}
+  0%   {right:-725px; top:0px;}
+  100% {right:-525px; top:0px;}
 }
+
 #second {
-width: 100%;
-height: 100%;
+height:100%;
+width:100%;
 }
 #left {
   position: relative;
@@ -41,6 +46,7 @@ height: 100%;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 #right {
   position: relative;
   animation-name: right;
@@ -49,38 +55,88 @@ height: 100%;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 @keyframes left {
   0%   {left:0px; top:0px;}
   100% {left:200px; top:0px;}
 }
+
 @keyframes right {
-  0%   {right:-525px; top:0px;}
-  100% {right:-325px; top:0px;}
+  0%   {right:-725px; top:0px;}
+  100% {right:-525px; top:0px;}
+}
+
+#third {
+height:100%;
+width:100%;
+}
+#left {
+  position: relative;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+#right {
+  position: relative;
+  animation-name: right;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes left {
+  0%   {left:0px; top:0px;}
+  100% {left:200px; top:0px;}
+}
+
+@keyframes right {
+  0%   {right:-725px; top:0px;}
+  100% {right:-525px; top:0px;}
+}
+
+#fourth {
+height:100%;
+width:100%;
+}
+#left {
+  position: relative;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+#right {
+  position: relative;
+  animation-name: right;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes left {
+  0%   {left:0px; top:0px;}
+  100% {left:200px; top:0px;}
+}
+
+@keyframes right {
+  0%   {right:-725px; top:0px;}
+  100% {right:-525px; top:0px;}
 }
 </style>
 <body>
-<div id="first">
-<video id="left" width="200" height="200" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-<video id="right" width="200" height="200" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div>
+  
+<div id="first"><img id="left" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"><img id="right" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"></div>
+<div id="second"><img id="left" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"><img id="right" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"></div>
+<div id="third"><img id="left" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"><img id="right" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"></div>
+<div id="fourth"><img id="left" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"><img id="right" src="img_girl.jpg" alt="Girl in a jacket" width="100" height="100"></div>
 
-<div id="second">
-<video id="left" width="200" height="200" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-</video>
-<video id="right" width="200" height="200" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-</video>
-</div>
 </body>
 </html>
+
