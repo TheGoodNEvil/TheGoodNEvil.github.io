@@ -23,7 +23,53 @@ font-style: italic; text-align: center; border: 1px outset red; border-radius: 5
   
 <style>
   
-body {background: url('Nike.gif'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;}
+#Bgs {
+  width:100%;
+  height:100vh;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  backface-visibility:hidden;
+  animation:BGS 50s linear infinite 0s;
+  animation-timinig-function:linear;
+  background-image:url('Nike.gif');
+  }
+  
+  @keyframes BGS {
+    0% {background-image:url('Nike.gif');
+  }
+  
+    10% {background-image:url('Nike2.gif');
+  }
+  
+    20% {background-image:url('Nike3.gif');
+  }
+  
+    30% {background-image:url('Nike4.gif');
+  }
+  
+    40% {background-image:url('Nike5.gif');
+  }
+  
+    50% {background-image:url('Nike6.gif');
+  }
+  
+    60% {background-image:url('Nike7.gif');
+  }
+  
+    70% {background-image:url('Nike8.gif');
+  }
+  
+    80% {background-image:url('Nike10.gif');
+  }
+  
+    90% {background-image:url('Nike11.gif');
+  }
+  
+  100% {background-image:url('Nike11.gif');
+  }
+  }
+  
 
 h1 {font-family: "Monotype Corsiva"; font-style: italic; text-align: center; color: red; text-shadow: 1px 1px 1px white; position: relative; 
 animation-name: one; animation-duration: 6s;}
@@ -166,6 +212,8 @@ video {display: block; border: 1px outset red; border-radius: 10px; margin: auto
 </head>
   
 <body>
+  
+<div id="Bgs"></div>
   
 <header style="text-align: center;">
   
