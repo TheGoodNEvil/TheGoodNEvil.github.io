@@ -34,13 +34,13 @@ li a:hover {
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("#first").fadeIn();
-    $("#sec").fadeIn(1000);
-    $("#third").fadeIn(2000);
-    $("#fourth").fadeIn(3000);
-    $("#fifth").fadeIn(4000);
-    $("#sixth").fadeIn(5000);
-    $("#sev").fadeIn(6000);
+    $("#first").fadeToggle();
+    $("#sec").fadeToggle(1000);
+    $("#third").fadeToggle(2000);
+    $("#fourth").fadeToggle(3000);
+    $("#fifth").fadeToggle(4000);
+    $("#sixth").fadeToggle(5000);
+    $("#sev").fadeToggle(6000);
   });
 });
 </script> 
@@ -58,7 +58,7 @@ $(document).ready(function(){
 <h1 style="text-align:center;"><b>Digital Verto: News</b></h1>
   <br>
   
- <button style="text-align:center;background-color:red;color:black;border:3px outset black;border-radius:5px;">Click To Have The News Fade In</button>
+ <button style="text-align:center;background-color:red;color:black;border:3px outset black;border-radius:5px;">Click Here To Have The News Fade In Or Fade Out</button>
   <br>
   
 <p id="first" style="background-color:black;color:red;text-align:center;border:outset 3px red;border-radius:5px;display:none;"><i>The news article "China's Surveillance State Sucks Up Data. U.S. Tech Is Key To Storing It." was published in The New York Times website, and 
