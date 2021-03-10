@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<style>
-  body{background-color:black;color:green;text-align:center;}
+<style> 
+body {background-color:black;color:green;}
 ul {text-align:center;
   list-style-type: none;
   margin: 0;
@@ -48,8 +46,43 @@ footer:hover {
   transition: linear 0.1s transform;
   transform: scale(1.25);
 }
+#first {
+ 
+  background-color: black;
+  text-align:left;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#second {
+ 
+  background-color: black;
+  text-align:right;
+  position: relative;
+  animation-name: sec;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  100%  {left:200px; top:0px;}
+  
+}
+
+@keyframes sec {
+0% {right:0px; top:0px;}
+100% {right:200px; top:0px;}
+}
 </style>
 </head>
+
 <body>
 
 <ul>
@@ -60,8 +93,10 @@ footer:hover {
 </ul>
 <br>
 
-<h1 style="text-align:center;"><b>Gerardo Tapia Vera: Contact</b></h1>
-<p style="text-align:center;"><i>Contact me via <a href="mailto:gerardov66@gmail.com">email</a> or at my cell phone number <a href="tel:+18315407024">+18315407024.</a></i></p>
+<h1 style="text-align:center"><b>Gerardo Tapia Vera: Contact</b></h1>
+<p id="first"><i><a href="mailto:gerardov66@gmail.com">!liame</a> aiv em tcatnoC</p> 
+
+<p id="second">Contact me at my cell phone number <a href="tel:+18315407024">+18315407024!</a></i></p>
   
 <footer style="text-align:center;"><i>&copy; 2020-2021 by Gerardo Tapia Vera. All Rights Reserved.</i></footer>
 
