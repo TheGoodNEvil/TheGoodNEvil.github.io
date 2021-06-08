@@ -114,8 +114,33 @@ footer:hover {
 
 <div style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/YelTdb0p58c" title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<p>Click the button below to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="geolo"></p>
   
 <footer style="text-align:center;"><i>&copy; 2020-2021 by Gerardo Tapia Vera. All Rights Reserved.</i></footer>
+
+<script>
+var x = document.getElementById("geolo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 
 
 </body>
