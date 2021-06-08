@@ -47,11 +47,34 @@
   <area shape="circle" coords="200,325,100" onmouseover="myFunction()">
 </map>
   
+<p>Click the button below to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="demo"></p>
+  
 <footer style="text-align:center;"><i>&copy; 2020-2021 by Gerardo Tapia Vera. All Rights Reserved.</i></footer>
 
 <script>
 function myFunction() {
   alert("You've hovered over my image, thanks! Now, click on the image to be directed to my 'About' page!");
+}
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
 }
 </script>
 
